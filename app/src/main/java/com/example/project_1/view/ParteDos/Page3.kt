@@ -1,0 +1,25 @@
+package com.example.project_1.view.ParteDos
+
+import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.material3.Button
+import androidx.compose.material3.Text
+import androidx.compose.runtime.Composable
+import androidx.compose.ui.Alignment
+import androidx.compose.ui.Modifier
+import androidx.navigation.NavHostController
+
+@Composable
+fun Detalles(navController: NavHostController) {
+    Box(
+        modifier = Modifier.fillMaxSize(),
+        contentAlignment = Alignment.Center
+    ) {
+        Text(
+            text = "Hola desde ventana 3: detalle"
+        )
+        Button(onClick = { navController.navigate("home") }) {
+            Text(text = "Volver al inicio")
+        }
+    }
+}

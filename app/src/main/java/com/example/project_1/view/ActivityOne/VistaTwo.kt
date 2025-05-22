@@ -1,46 +1,43 @@
 package com.example.project_1.view.ActivityOne
 
-import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.example.project_1.R
+import androidx.navigation.NavHostController
 
 @Composable
-fun VistaTwo(){
-    Column (modifier = Modifier
-        .padding(25.dp)
-        .width(300.dp)
-        .height(60.dp),
-        horizontalAlignment = Alignment.CenterHorizontally
-    ) {
-        Text(text = "bibi", fontSize = 60.sp, fontWeight = FontWeight.Bold)
-    }
+fun VistaTwo(navController: NavHostController) {
+//    Column (modifier = Modifier
+//        .padding(25.dp)
+//        .width(300.dp)
+//        .height(60.dp),
+//        horizontalAlignment = Alignment.CenterHorizontally
+//    ) {
+//        Text(text = "bibi", fontSize = 60.sp, fontWeight = FontWeight.Bold)
+//    }
     //---------------------------------------------------------------------
     Column (modifier = Modifier
         .fillMaxSize(),
         verticalArrangement = Arrangement.SpaceAround)
     {
-        Image(
-            painter = painterResource(R.drawable.metricas),
-            contentDescription = null,
-            modifier = Modifier
-                .padding(25.dp)
-                .size(380.dp)
-        )
+//        Image(
+//            painter = painterResource(R.drawable.metricas),
+//            contentDescription = null,
+//            modifier = Modifier
+//                .padding(25.dp)
+//                .size(380.dp)
+//        )
         Column(
             modifier = Modifier
                 .padding(horizontal = 2.dp)
