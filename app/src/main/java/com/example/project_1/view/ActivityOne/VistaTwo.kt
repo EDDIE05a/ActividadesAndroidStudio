@@ -1,16 +1,20 @@
 package com.example.project_1.view.ActivityOne
 
+import androidx.compose.foundation.Image
+import com.example.project_1.R
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -18,34 +22,31 @@ import androidx.navigation.NavHostController
 
 @Composable
 fun VistaTwo(navController: NavHostController) {
-//    Column (modifier = Modifier
-//        .padding(25.dp)
-//        .width(300.dp)
-//        .height(60.dp),
-//        horizontalAlignment = Alignment.CenterHorizontally
-//    ) {
-//        Text(text = "bibi", fontSize = 60.sp, fontWeight = FontWeight.Bold)
-//    }
-    //---------------------------------------------------------------------
-    Column (modifier = Modifier
-        .fillMaxSize(),
-        verticalArrangement = Arrangement.SpaceAround)
-    {
-//        Image(
-//            painter = painterResource(R.drawable.metricas),
-//            contentDescription = null,
-//            modifier = Modifier
-//                .padding(25.dp)
-//                .size(380.dp)
-//        )
-        Column(
-            modifier = Modifier
-                .padding(horizontal = 2.dp)
-                .width(360.dp)
-                .height(60.dp),
+    Column(
+        modifier = Modifier
+            .fillMaxSize()
+            .padding(25.dp),
+        verticalArrangement = Arrangement.SpaceAround,
+        horizontalAlignment = Alignment.CenterHorizontally
+    ) {
+        // Título
+        Text(
+            text = "bibi",
+            fontSize = 60.sp,
+            fontWeight = FontWeight.Bold
+        )
 
-            horizontalAlignment = Alignment.CenterHorizontally,
-            verticalArrangement = Arrangement.Center
+        // Imagen
+        Image(
+            painter = painterResource(R.drawable.metricas),
+            contentDescription = null,
+            modifier = Modifier
+                .size(300.dp)
+        )
+
+        // Texto 1
+        Column(
+            horizontalAlignment = Alignment.CenterHorizontally
         ) {
             Text(
                 text = "For cabin crew who want",
@@ -60,25 +61,14 @@ fun VistaTwo(navController: NavHostController) {
                 fontWeight = FontWeight.Bold
             )
         }
-        Column ( modifier = Modifier
-            .padding(horizontal = 10.dp, vertical = 15.dp)
-            .width(380.dp)
-            .height(60.dp),
-            horizontalAlignment = Alignment.CenterHorizontally,
-            verticalArrangement = Arrangement.Center
+
+        // Texto 2
+        Column(
+            horizontalAlignment = Alignment.CenterHorizontally
         ) {
-            Text(
-                text = "Share your knowledge with",
-                modifier = Modifier.align(Alignment.CenterHorizontally)
-            )
-            Text(
-                text = "students, recruit students and",
-                modifier = Modifier.align(Alignment.CenterHorizontally)
-            )
-            Text(
-                text = "earn money on it",
-                modifier = Modifier.align(Alignment.CenterHorizontally)
-            )
+            Text(text = "Share your knowledge with")
+            Text(text = "students, recruit students and")
+            Text(text = "earn money on it")
         }
     }
 }

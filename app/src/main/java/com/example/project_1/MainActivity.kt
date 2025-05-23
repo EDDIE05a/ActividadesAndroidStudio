@@ -21,8 +21,12 @@ import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import androidx.navigation.NavHostController
+import androidx.navigation.compose.rememberNavController
 import com.example.project_1.ui.theme.Project_1Theme
+import com.example.project_1.view.ActivityOne.Navegar
 import com.example.project_1.view.ActivityOne.VistaOne
 import com.example.project_1.view.ActivityOne.VistaThree
 import com.example.project_1.view.ActivityOne.VistaTwo
@@ -36,14 +40,16 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             Project_1Theme {
-                Navigate()
+                Navegar()
             }
         }
     }
 }
+
 @Composable
-fun Horizontal() {
+fun Horizontal(navController: NavHostController) {
     val pagerState = rememberPagerState(pageCount = { 3 })
+
     LaunchedEffect(Unit) {
         while (true) {
             delay(3000L)
@@ -51,9 +57,8 @@ fun Horizontal() {
             pagerState.animateScrollToPage(nextPage)
         }
     }
-    Column(
-        modifier = Modifier
-    ) {
+
+    Column {
         HorizontalPager(state = pagerState) { page ->
             when (page) {
                 0 -> VistaOne(navController)
@@ -62,10 +67,6 @@ fun Horizontal() {
                 else -> Text(text = "No se encontró ventana")
             }
         }
-
-
-
-
 
         Row(
             modifier = Modifier
@@ -78,19 +79,16 @@ fun Horizontal() {
                 Box(
                     modifier = Modifier
                         .size(10.dp)
-                        .padding(horizontal = 2.dp)
+                        .padding(horizontal = 1.dp)
                         .background(
-                            if (pagerState.currentPage == i) Color.Black else Color.LightGray.copy(
-                                alpha = 0.5f
-                            ),
+                            if (pagerState.currentPage == i) Color.Black else Color.LightGray.copy(alpha = 0.5f),
                             shape = CircleShape
                         )
-                ) {
-
-                }
+                )
             }
         }
     }
+}
 
 
 // Scroll horizontal de vistas
@@ -132,10 +130,11 @@ fun Horizontal() {
 //    }
 //}
 
+@Preview
 @Composable
-fun GreatingPreview() {
+fun GreetingPreview() {
     Project_1Theme {
-        VistaThree(navController)
+
     }
 }
-}
+
