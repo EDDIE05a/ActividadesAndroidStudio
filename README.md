@@ -11,5 +11,7 @@ Cada actividad se encuentra en su **propia rama**, separando cada proyecto sin i
 ✅ **main**: Rama principal, con este archivo README y estructura base.
 
 🧠 **Ramas por actividad**:
-- `ActividadVistas`: Actividad del 14/05/2025
+- `ActividadVistas`: Actividad del 14/05/2025 (Vista 3 pantallas)
 
+- `ActividadVistas`: Actividad del 21/05/2025 (Creacion de 2 pantallas y navegación entre ellas)
+- 
