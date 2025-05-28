@@ -13,6 +13,7 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.pager.HorizontalPager
 import androidx.compose.foundation.pager.rememberPagerState
 import androidx.compose.foundation.shape.CircleShape
@@ -29,48 +30,63 @@ import androidx.navigation.NavHostController
 
 @Composable
 fun VistaOne(navController: NavHostController) {
-    Column(
+    LazyColumn(
         modifier = Modifier
             .fillMaxSize()
             .padding(25.dp),
-        verticalArrangement = Arrangement.SpaceBetween,
-        horizontalAlignment = Alignment.CenterHorizontally
+        horizontalAlignment = Alignment.CenterHorizontally,
+        verticalArrangement = Arrangement.spacedBy(16.dp) // espacio entre items
     ) {
-        // Título principal
-        Text(
-            text = "bibi",
-            fontSize = 60.sp,
-            fontWeight = FontWeight.Bold
-        )
+        item {
+            // Título principal
+            Text(
+                text = "bibi",
+                fontSize = 60.sp,
+                fontWeight = FontWeight.Bold,
+                modifier = Modifier.fillMaxWidth(),
+            )
+        }
 
-        // Imagen principal
-        Image(
-            painter = painterResource(R.drawable.ic_launcher_parceroconpc),
-            contentDescription = null,
-            modifier = Modifier
-                .size(280.dp) // Ajustado para evitar desbordes
-                .padding(top = 16.dp)
-        )
+        item {
+            // Imagen principal
+            Image(
+                painter = painterResource(R.drawable.ic_launcher_parceroconpc),
+                contentDescription = null,
+                modifier = Modifier
+                    .size(280.dp)
+                    .padding(top = 16.dp)
+//                    .align(Alignment.CenterHorizontally),
+            )
+        }
 
-        // Subtítulo
-        Text(
-            text = "For students who want to\nbecome flight attendants",
-            fontSize = 20.sp,
-            color = Color.Black,
-            fontWeight = FontWeight.Bold,
-            modifier = Modifier.padding(top = 16.dp),
-            lineHeight = 24.sp
-        )
+        item {
+            // Subtítulo
+            Text(
+                text = "For students who want to\nbecome flight attendants",
+                fontSize = 20.sp,
+                color = Color.Black,
+                fontWeight = FontWeight.Bold,
+                modifier = Modifier
+                    .padding(top = 16.dp)
+                    .fillMaxWidth(),
+                lineHeight = 24.sp
+            )
+        }
 
-        // Descripción secundaria
-        Column(
-            horizontalAlignment = Alignment.CenterHorizontally,
-            verticalArrangement = Arrangement.spacedBy(4.dp)
-        ) {
-            Text(text = "Communicate with attendants")
-            Text(text = "and find out useful information that")
-            Text(text = "will help you fulfill your dream")
+        item {
+            // Descripción secundaria
+            Column(
+                horizontalAlignment = Alignment.CenterHorizontally,
+                verticalArrangement = Arrangement.spacedBy(4.dp),
+                modifier = Modifier.fillMaxWidth()
+            ) {
+                Text(text = "Communicate with attendants")
+                Text(text = "and find out useful information that")
+                Text(text = "will help you fulfill your dream")
+            }
         }
     }
 }
+
+
 

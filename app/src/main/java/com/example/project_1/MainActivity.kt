@@ -30,7 +30,9 @@ import com.example.project_1.view.ActivityOne.Navegar
 import com.example.project_1.view.ActivityOne.VistaOne
 import com.example.project_1.view.ActivityOne.VistaThree
 import com.example.project_1.view.ActivityOne.VistaTwo
+import com.example.project_1.view.ParteDos.Formulario
 import com.example.project_1.view.ParteDos.Navigate
+import com.example.project_1.view.ParteDos.TemaDinamico
 import kotlinx.coroutines.delay
 
 
@@ -40,7 +42,8 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             Project_1Theme {
-                Navegar()
+//                Formulario()
+                TemaDinamico()
             }
         }
     }
@@ -52,7 +55,7 @@ fun Horizontal(navController: NavHostController) {
 
     LaunchedEffect(Unit) {
         while (true) {
-            delay(3000L)
+            delay(2000L)
             val nextPage = (pagerState.currentPage + 1) % 3
             pagerState.animateScrollToPage(nextPage)
         }
@@ -81,7 +84,9 @@ fun Horizontal(navController: NavHostController) {
                         .size(10.dp)
                         .padding(horizontal = 1.dp)
                         .background(
-                            if (pagerState.currentPage == i) Color.Black else Color.LightGray.copy(alpha = 0.5f),
+                            if (pagerState.currentPage == i) Color.Black else Color.LightGray.copy(
+                                alpha = 0.5f
+                            ),
                             shape = CircleShape
                         )
                 )
