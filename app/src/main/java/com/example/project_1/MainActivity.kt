@@ -30,6 +30,11 @@ import com.example.project_1.view.ActivityOne.Navegar
 import com.example.project_1.view.ActivityOne.VistaOne
 import com.example.project_1.view.ActivityOne.VistaThree
 import com.example.project_1.view.ActivityOne.VistaTwo
+import com.example.project_1.view.ActivityViewModel.Ejercicio1
+import com.example.project_1.view.ActivityViewModel.Ejercicio2
+import com.example.project_1.view.ActivityViewModel.Ejercicio3
+import com.example.project_1.view.ActivityViewModel.Ejercicio4
+import com.example.project_1.view.ActivityViewModel.Ejercicio5
 import com.example.project_1.view.ParteDos.Formulario
 import com.example.project_1.view.ParteDos.Navigate
 import com.example.project_1.view.ParteDos.TemaDinamico
@@ -42,8 +47,13 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             Project_1Theme {
-//                Formulario()
-                TemaDinamico()
+//               Formulario()
+//               TemaDinamico()
+//               Ejercicio1()
+//               Ejercicio2()
+//                Ejercicio3()
+//                Ejercicio4()
+               Ejercicio5()
             }
         }
     }
