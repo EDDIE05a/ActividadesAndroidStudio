@@ -31,10 +31,15 @@ import com.example.project_1.view.ActivityOne.VistaOne
 import com.example.project_1.view.ActivityOne.VistaThree
 import com.example.project_1.view.ActivityOne.VistaTwo
 import com.example.project_1.view.ActivityViewModel.Ejercicio1
+import com.example.project_1.view.ActivityViewModel.Ejercicio10
 import com.example.project_1.view.ActivityViewModel.Ejercicio2
 import com.example.project_1.view.ActivityViewModel.Ejercicio3
 import com.example.project_1.view.ActivityViewModel.Ejercicio4
 import com.example.project_1.view.ActivityViewModel.Ejercicio5
+import com.example.project_1.view.ActivityViewModel.Ejercicio6
+import com.example.project_1.view.ActivityViewModel.Ejercicio7
+import com.example.project_1.view.ActivityViewModel.Ejercicio8
+import com.example.project_1.view.ActivityViewModel.Ejercicio9
 import com.example.project_1.view.ParteDos.Formulario
 import com.example.project_1.view.ParteDos.Navigate
 import com.example.project_1.view.ParteDos.TemaDinamico
@@ -53,7 +58,13 @@ class MainActivity : ComponentActivity() {
 //               Ejercicio2()
 //                Ejercicio3()
 //                Ejercicio4()
-               Ejercicio5()
+////               Ejercicio5()
+//                Ejercicio6()
+//                Ejercicio7()
+//                Ejercicio8()
+//                Ejercicio9()
+                Ejercicio10()
+
             }
         }
     }
